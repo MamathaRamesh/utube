@@ -1,0 +1,45 @@
+/* src/App.scss */
+
+/* Apply styles to the root container */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Create a flex container for the entire app */
+.app-container {
+  // display: flex;
+  height: 100vh; /* 100% of the viewport height */
+}
+
+/* Style the sidebar */
+.sidebar {
+  width: 250px; /* Set your desired width */
+  background-color: #333;
+  color: white;
+  overflow-y: auto; /* Add scroll if content overflows */
+  z-index: 1; /* Ensure the sidebar is above other content */
+  position: fixed; /* Fix the sidebar in place */
+  
+  /* Additional styling for links in the sidebar */
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    &:hover {
+      color: #61dafb;
+    }
+  }
+}
+
+/* Style the content area */
+.content {
+  flex-grow: 1; /* Grow to fill the remaining space */
+  padding: 20px; /* Add padding for content */
+  background-color: #f0f0f0; /* Add a background color */
+  overflow-y: auto; /* Add scroll if content overflows */
+  z-index: 0; /* Ensure the content is behind the sidebar */
+  margin-left: 250px; /* Adjust this value to match the sidebar width */
+}
